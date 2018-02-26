@@ -8,7 +8,7 @@ const _config = require("./config.json");
 const debug    = true;
 const prefix   = '&';
 const apiKeyK  = "TRN-Api-Key";
-const apiKeyV  = _config.api_key;
+const apiKeyV  = process.env.api_key;
 const apiLink  = "https://api.fortnitetracker.com/v1/profile";
 // CHANNELS
 const BR_PC    = (debug ? "412675076433903616" : "362236453771804683");
