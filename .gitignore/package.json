@@ -1,0 +1,29 @@
+{
+  "name": "fortnitestatbot",
+  "version": "1.0.0",
+  "description": "Bot fortnitestatbot",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamesc974/fortnitestatbot"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "fortnite",
+    "tracker",
+    "statistics",
+    "details"
+  ],
+  "author": "DCH/TarKyo",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Jamesc974/fortnitestatbot"
+  },
+  "homepage": "https://github.com/Jamesc974/fortnitestatbot",
+  "dependencies": {
+    "discord.js": "^11.3.0",
+    "fs": "0.0.1-security",
+    "snekfetch": "^3.6.4"
+  }
+}
