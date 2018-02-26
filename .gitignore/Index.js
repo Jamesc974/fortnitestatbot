@@ -3,7 +3,6 @@ const _discord = require('discord.js');
 const _client  = new _discord.Client();
 const _snek = require("snekfetch");
 const _fs = require("fs");
-const _config = require("./config.json");
 // KEYS
 const debug    = true;
 const prefix   = '&';
