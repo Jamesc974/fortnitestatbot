@@ -5,7 +5,7 @@ const _snek = require("snekfetch");
 const _fs = require("fs");
 // KEYS
 const debug    = true;
-const prefix   = '&';
+const prefix   = '!';
 const apiKeyK  = "TRN-Api-Key";
 const apiKeyV  = process.env.api_key;
 const apiLink  = "https://api.fortnitetracker.com/v1/profile";
