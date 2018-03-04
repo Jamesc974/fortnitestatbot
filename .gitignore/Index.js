@@ -90,6 +90,12 @@ const handleApiData = (resp, data) => {
     }
 }
 
+_client.on("ready", async () => {
+  console.log(`${_client.user.username} est en ligne sur ${_client.guilds.size} serveurs!`);
+  _client.user.setPresence({ game: { name: `[!stats] || connecté à ${_client.guilds.size} serveur || créé par TarKyo et DCH`}})
+
+});
+
 // MESSAGE
 _client.on('message', async (message) => {
     // VALID MESSAGE
