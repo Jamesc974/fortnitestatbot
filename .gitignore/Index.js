@@ -16,12 +16,12 @@ const BR_XB1   = (debug ? "412675141076779018" : "362676808975646732");
 const STW_PC   = (debug ? "412675150174224384" : "322852071051231242");
 const STW_PS4  = (debug ? "412675159518871552" : "362676713592717314");
 const STW_XB1  = (debug ? "412675168499007490" : "362676802642247690");
-const TYPES    = [ 'pc', 'ps4', 'xb1' ];
+const TYPES    = [ 'pc', 'psn', 'xbl' ];
 const LABELS   = [ 'pc', 'psn', 'xbl' ];
 
 // STATISTICS COMMAND
 const checkUsage = (message) => {
-    message.reply(`:thinking: À tu indiqué ton nom ? ${prefix}stats pc, xb1, ps4 **<PSEUDO>**`);
+    message.reply(`:thinking: À tu indiqué ton nom ? ${prefix}stats pc, xbl, psn **<PSEUDO>**`);
 };
 
 const getChannelType = (channel) => {
@@ -30,10 +30,10 @@ const getChannelType = (channel) => {
             return "pc";
         
         case BR_PS4: case STW_PS4:
-            return "ps4";
+            return "psn";
             
         case BR_XB1: case STW_XB1:
-            return "xb1";
+            return "xbl";
 
         default:
             return null;
@@ -116,7 +116,7 @@ _client.on('message', async (message) => {
         
         // HELP COMMAND
         if(['help', 'info', 'information'].indexOf(cmd) >= 0) {
-            message.reply(`:blue_book: Commande disponible:\n- ${prefix}stats pc/ps4/xb1 **<Pseudo>**`);
+            message.reply(`:blue_book: Commande disponible:\n- ${prefix}stats pc/psn/xbl **<Pseudo>**`);
         }
 
         // STATISTICS COMMAND
@@ -129,12 +129,12 @@ _client.on('message', async (message) => {
                         
                     }
                     break;
-                case "ps4":
+                case "psn":
                     {
                         
                     }
                     break;
-                case "xb1":
+                case "xbl":
                     {
 
                     }
