@@ -180,7 +180,7 @@ _client.on('message', async (message) => {
                                 ebd.addField("Solo", `Wins: **${soloStats['top1']}** - K/D: **${soloStats['kd']}** - Temps de jeux: **${soloStats['minutesPlayed']}**`);
                                 ebd.addField("Duo", `Wins: **${duoStats['top1']}** - K/D: **${duoStats['kd']}** - Temps de jeux: **${duoStats['minutesPlayed']}**`);
                                 ebd.addField("Selection", `Wins: **${squadStats['top1']}** - K/D: **${squadStats['kd']}** - Temps de jeux: **${squadStats['minutesPlayed']}**`);
-                                ebd.setFooter(`demander par: ${message.author.tag} |Créé par DCH#0001, iconm`);
+                                ebd.setFooter(`demander par: ${message.author.tag} |Créé par DCH#0001`, iconm);
                                 message.channel.send({ embed: ebd });
                             });
                         }
