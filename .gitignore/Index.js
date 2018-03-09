@@ -172,7 +172,7 @@ _client.on('message', async (message) => {
                                 if(error) return;
 
                                 // GET EMBED
-                                var iconm = message.author.avatarURL
+                                let iconm = message.author.avatarURL
                                 let ebd = new _discord.RichEmbed();
                                 ebd.setAuthor(`Suivi de '${userHandle}'`, _client.user.avatarURL);
                                 ebd.setThumbnail(_client.user.avatarURL);
