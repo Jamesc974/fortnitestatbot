@@ -199,5 +199,12 @@ _client.on('ready', () => {
   console.log(`BOT ${_client.user.tag} connecté!`);
 });
 
+_client.on("guildCreate", guild => {
+  console.log(`-------------------------------[ Nouveau serveur ]-------------------------------`);
+  console.log(`Le bot a rejoint le serveur ${guild.name}, createur: ${guild.owner.user.tag}`);
+  console.log(`----------------------------------------------------------------------------------`);
+
+});
+
 // LOGIN
 _client.login(process.env.TOKEN);
