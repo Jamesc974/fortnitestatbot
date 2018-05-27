@@ -177,10 +177,11 @@ _client.on('message', async (message) => {
                                 ebd.setAuthor(`Suivi de '${userHandle}'`, _client.user.avatarURL);
                                 ebd.setColor("#4c33ff")
                                 ebd.setThumbnail(_client.user.avatarURL);
-                                ebd.addField("Stats", `Wins: **${lifetimeStats['Wins']}** 🏆 - K/D: **${lifetimeStats['K/d']}** 🔫 - Temps de jeux: **${lifetimeStats['Time Played']}** 🕤\nTop 3: **${lifetimeStats['Top 3s']}** 🎗 - Top 5: **${lifetimeStats['Top 5s']}** 🎗 - Top 6: **${lifetimeStats['Top 6s']}** 🎗 - Top 12: **${lifetimeStats['Top 12s']}** 🎗 - Top 25: **${lifetimeStats['Top 25s']}** 🎗`);
-                                ebd.addField("Solo", `Wins: **${soloStats['top1']}** 🏆 - K/D: **${soloStats['kd']}** 🔫 - Temps de jeux: **${soloStats['minutesPlayed']}** 🕤`);
-                                ebd.addField("Duo", `Wins: **${duoStats['top1']}** 🏆 - K/D: **${duoStats['kd']}** 🔫 - Temps de jeux: **${duoStats['minutesPlayed']}** 🕤`);
-                                ebd.addField("Selection", `Wins: **${squadStats['top1']}** 🏆 - K/D: **${squadStats['kd']}** 🔫 - Temps de jeux: **${squadStats['minutesPlayed']}** 🕤`);
+                                ebd.addField("Stats", `Wins: **${lifetimeStats['Wins']}** 🏆 - K/D: **${lifetimeStats['K/d']}** 🔫 \nTop 3: **${lifetimeStats['Top 3s']}** 🎗 - Top 5: **${lifetimeStats['Top 5s']}** 🎗 - Top 6: **${lifetimeStats['Top 6s']}** 🎗 - Top 12: **${lifetimeStats['Top 12s']}** 🎗 - Top 25: **${lifetimeStats['Top 25s']}** 🎗`);
+                                ebd.addField("Solo", `Wins: **${soloStats['top1']}** 🏆 - K/D: **${soloStats['kd']}** 🔫`);
+                                ebd.addField("Duo", `Wins: **${duoStats['top1']}** 🏆 - K/D: **${duoStats['kd']}** 🔫`);
+                                ebd.addField("Selection", `Wins: **${squadStats['top1']}** 🏆 - K/D: **${squadStats['kd']}** 🔫`);
+                                ebd.setTimestamp()
                                 ebd.setFooter(`demander par: ${message.author.tag} |Créé par DCH#0001`, iconm);
                                 message.delete().catch(O_o=>{});
                                 message.channel.send({ embed: ebd });
