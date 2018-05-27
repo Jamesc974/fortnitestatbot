@@ -16,8 +16,8 @@ const BR_XB1   = (debug ? "412675141076779018" : "362676808975646732");
 const STW_PC   = (debug ? "412675150174224384" : "322852071051231242");
 const STW_PS4  = (debug ? "412675159518871552" : "362676713592717314");
 const STW_XB1  = (debug ? "412675168499007490" : "362676802642247690");
-const TYPES    = [ 'pc', 'psn', 'xbl' ];
-const LABELS   = [ 'pc', 'psn', 'xbl' ];
+const TYPES    = [ 'pc', 'ps4', 'xbl' ];
+const LABELS   = [ 'pc', 'ps4', 'xb1' ];
 
 // STATISTICS COMMAND
 const checkUsage = (message) => {
@@ -30,10 +30,10 @@ const getChannelType = (channel) => {
             return "pc";
         
         case BR_PS4: case STW_PS4:
-            return "psn";
+            return "ps4";
             
         case BR_XB1: case STW_XB1:
-            return "xbl";
+            return "xb1";
 
         default:
             return null;
@@ -129,12 +129,12 @@ _client.on('message', async (message) => {
                         
                     }
                     break;
-                case "psn":
+                case "ps4":
                     {
                         
                     }
                     break;
-                case "xbl":
+                case "xb1":
                     {
 
                     }
@@ -175,6 +175,7 @@ _client.on('message', async (message) => {
                                 let iconm = message.author.avatarURL
                                 let ebd = new _discord.RichEmbed();
                                 ebd.setAuthor(`Suivi de '${userHandle}'`, _client.user.avatarURL);
+                                ebd.setColor("#4c33ff")
                                 ebd.setThumbnail(_client.user.avatarURL);
                                 ebd.addField("Stats", `Wins: **${lifetimeStats['Wins']}** 🏆 - K/D: **${lifetimeStats['K/d']}** 🔫 - Temps de jeux: **${lifetimeStats['Time Played']}** 🕤\nTop 3: **${lifetimeStats['Top 3s']}** 🎗 - Top 5: **${lifetimeStats['Top 5s']}** 🎗 - Top 6: **${lifetimeStats['Top 6s']}** 🎗 - Top 12: **${lifetimeStats['Top 12s']}** 🎗 - Top 25: **${lifetimeStats['Top 25s']}** 🎗`);
                                 ebd.addField("Solo", `Wins: **${soloStats['top1']}** 🏆 - K/D: **${soloStats['kd']}** 🔫 - Temps de jeux: **${soloStats['minutesPlayed']}** 🕤`);
