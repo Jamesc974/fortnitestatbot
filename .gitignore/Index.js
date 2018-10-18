@@ -98,6 +98,7 @@ _client.on("ready", async () => {
 
 // MESSAGE
 _client.on('message', async (message) => {
+    if(msg.channel.name == "stats") {
     // VALID MESSAGE
     if(message.type !== 'DEFAULT') return;
 
@@ -192,7 +193,7 @@ _client.on('message', async (message) => {
                     break;
             }
         }
-    }
+    }}
 });
 
 // READY
